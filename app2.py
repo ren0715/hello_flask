@@ -8,5 +8,11 @@ def index2():
     message = "Hello!"
     return render_template('index2.html',message = message)
 
+@app.route('/dict_page')
+def dict_page():
+    tmp_dict ={}
+    tmp_dict['name']= 'Roj'
+    tmp_dict['City'] = 'Manila'
+    return render_template('dict_page.html',info = tmp_dict)
 if __name__ == "__main__":
     app.run()
